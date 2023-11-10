@@ -251,7 +251,6 @@ body {
 
 
 
-
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {   
@@ -296,6 +295,120 @@ body {
   margin-top: 20px;
 }
 
+
+
+.menufoto { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; }.menufoto-item {position: relative;
+flex: 1;
+margin-right: 5px; /* Reduz a margem direita para 5px */
+background-color: #fff;
+color: #000;
+letter-spacing: 1.5px;
+text-align: center; /* Centraliza o texto */}.menufoto-item img { /* Font & Text */ font-family: Karla, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 0px; text-decoration: none solid rgb(106, 99, 89); text-align: center; text-indent: 0px; text-transform: none; vertical-align: baseline; white-space: normal; word-spacing: 0px;/* Color & Background */
+  background-attachment: scroll;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  color: rgb(106, 99, 89);
+
+  /* Box */
+  height: 200px;
+  width: 352.587px;
+  border: 0px none rgb(106, 99, 89);
+  border-top: 0px none rgb(106, 99, 89);
+  border-right: 0px none rgb(106, 99, 89);
+  border-bottom: 0px none rgb(106, 99, 89);
+  border-left: 0px none rgb(106, 99, 89);
+  margin: 0px;
+  padding: 0px;
+  max-height: 200px;
+  min-height: 0px;
+  max-width: 100%;
+  min-width: 0px;
+
+  /* Positioning */
+  position: relative;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  float: none;
+  display: inline;
+  clear: none;
+  z-index: auto;}.botao { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 20px; background-color: #ffffff; color: #000000; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }.botao:hover { background-color: #0056b3; }
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  
+  
+.menufoto {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; /* Reduced padding for mobile */
+  background-color: #fff;
+}
+
+.menufoto-item {
+  width: 100px;
+  display: inline-block;
+      width: 100%;
+      padding: 10px; /* Espaçamento entre as fotos */
+  flex: 1;
+  margin-right: 5px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-size: 12px; /* Reduced font size for mobile */
+}
+
+.menufoto-item img {
+  max-width: 100%; /* A imagem terá no máximo 100% da largura do elemento pai */
+  height: auto; /* A altura se ajustará automaticamente para manter a proporção original */
+  width: 200px; /* Largura máxima de 200px */
+}
+
+.botao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+}
+  
+  
+}
+
+
+
+
+
 .top-menu2 {
 
   /* Color & Background */
@@ -328,140 +441,3 @@ body {
         list-style-position: outside;
 
 }
-
-
-
-@media screen and (max-width: 600px) {
-
-
-
-        .carousel-container {
-          width: 100%;
-          overflow: hidden;
-          position: relative;
-        }
-
-        .carousel {
-          display: flex;
-          transition: transform 0.5s ease;
-        }
-
-        .menufoto-item img {
-                max-width: 100%;
-                max-height: 100%;
-          }
-
-        .carousel-controls {
-          text-align: center;
-        }
-
-        button {
-                background: linear-gradient(to bottom, #b500a3, #ad00b3);
-                color: #fff;
-                border: none;
-                padding: 10px 20px;
-                margin: 10px;
-                cursor: pointer;
-                border-radius: 5px;
-                transition: background 0.3s;
-          }
-
-          button:hover {
-                background: linear-gradient(to bottom, #ad00b3, #9700b5);
-          }
-
-        .menufoto {
-          display: flex; /* Exibe as imagens em linha */
-          overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-        }
-
-        .menufoto-item {
-          flex: 0 0 100%;
-          text-align: center;
-          margin: 0; /* Remove a margem para que as imagens fiquem justapostas */
-        }
-
-        .menufoto-item img {
-          max-width: 100%;
-          height: auto;
-          flex: 1;
-          min-width: 100%;
-          position: relative;
-        }
-
-        .botao {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          padding: 10px 20px;
-          background-color: #ffffff;
-          color: #000000;
-          text-decoration: none;
-          border-radius: 5px;
-          font-weight: bold;
-          transition: background-color 0.3s;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-  }
-
-
-
-
-  @media screen and (min-width: 601px) {
-        .prev, .next {
-          display: none;
-        }
-
-        .carousel {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 20px;
-                background-color: #fff;
-          }
-
-
-          .menufoto-item {
-                position: relative;
-                flex: 1;
-                margin-right: 5px; /* Reduz a margem direita para 5px */
-                background-color: #fff;
-                color: #000;
-                letter-spacing: 1.5px;
-                text-align: center; /* Centraliza o texto */
-          }
-
-          .menufoto-item img {
-                width: 350px;
-                /* Defina o tamanho máximo das imagens */
-                max-width: 350%; /* Para garantir que a imagem se ajuste à largura do contêiner */
-                height: auto; /* Manter a proporção original da imagem */
-
-                /* Restante das configurações de fonte, cor, fundo e caixa aqui */
-          }
-
-          .botao {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 10px 20px;
-                background-color: #ffffff;
-                color: #000000;
-                text-decoration: none;
-                border-radius: 5px;
-                font-weight: bold;
-                transition: background-color 0.3s;
-          }
-
-          .botao:hover {
-                background-color: #0056b3;
-          }
-
-
-  }
