@@ -1,125 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Seu Título</title>
-    <!-- Inclua aqui as meta tags, links para folhas de estilo CSS e outros elementos do cabeçalho -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://kit.fontawesome.com/88d9fd27b7.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Eight</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+
+    <!-- Include Bootstrap CSS --> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
 </head>
 <body>
-    <header>
-        <!-- Aqui você pode adicionar seu cabeçalho personalizado -->
-    </header>
-    <main>
-
-      <div class="top-menu">
-        <ul class="menu">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#news">Relacionamento</a></li>
-          <li><a href="#contact">Beleza</a></li>
-          <li><a href="#contact">Decoração</a></li>
-          <li><a href="#contact">Dicas</a></li>
-          <li><a href="#contact">Receitas</a></li>
-          <li><a href="#contact">School</a></li>
-          <li><a href="#contact">Entre em contato</a></li>
-        </ul>
-        <div class="icons">
-          <i class="fa fa-facebook"></i>
-          <i class="fa fa-pinterest"></i>
-          <i class="fa fa-instagram"></i>
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-
-      <div class="header">
-        <h1>Rosane Geringer</h1>
-      </div>
 
 
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="menufoto-item">
-            <img src="Imagens/foto1.jpg" alt="Imagem 1">
-            <a href="#a" class="botao botao1">BOTAO</a>
-          </div>
-          <div class="menufoto-item">
-            <img src="Imagens/foto2.jpg" alt="Imagem 2">
-            <a href="#b" class="botao botao2">BOTAO</a>
-          </div>
-          <div class="menufoto-item">
-            <img src="Imagens/foto3.jpg" alt="Imagem 3">
-            <a href="#c" class="botao botao3">BOTAO</a>
-          </div>
-          <div class="menufoto-item">
-            <img src="Imagens/foto1.jpg" alt="Imagem 4">
-            <a href="#d" class="botao botao4">BOTAO</a>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <button class="prev">Anterior</button>
-          <button class="next">Próxima</button>
-        </div>
-      </div>
+    <div class="topmenu">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Relacionamento</a>
+            <a href="#">Beleza</a>
+            <a href="#">Decoração</a>
 
+            <div class="dropdown">
+                <a href="#">Dicas <span class="arrow-down">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Dica 1</a>
+                    <a href="#">Dica 2</a>
+                    <a href="#">Dica 3</a>
+                </div>
+            </div>
 
+            <a href="#">Receitas</a>
+            <a href="#">School</a>
+            <a href="#">Entre em contato</a>
+            <ul>
+                <li class="item">
+                    <a href="#">
+                        <img src="Imagens/instagram.svg" alt="Descrição da imagem">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="Imagens/linkedin.svg">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="Imagens/pinterest.svg">
+                    </a>
+                </li>
+                <li class="item">
+                    <a href="#">
+                        <img src="Imagens/x-twitter.svg">
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-
-
-
-      <div class="top-menu2">
-
-      </div>
-
-
-      <div class="row">
-        <div class="leftcolumn">
-          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-          </div>
-          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-          </div>
-        </div>
-        <div class="rightcolumn">
-          <div class="card">
-            <h2>About Me</h2>
-            <div class="fakeimg" style="height:100px;">Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-          </div>
-          <div class="card">
-            <h3>Popular Post</h3>
-            <div class="fakeimg"><p>Image</p></div>
-            <div class="fakeimg"><p>Image</p></div>
-            <div class="fakeimg"><p>Image</p></div>
-          </div>
-          <div class="card">
-            <h3>Follow Me</h3>
-            <p>Some text..</p>
-          </div>
-        </div>
-      </div>
-
-
-
-    </main>
-    <div class="footer">
-      <h2>Footer</h2>
     </div>
-    <!-- Inclua aqui os scripts JavaScript que você deseja usar -->
-    <script src="script.js"></script>
 
-
-
+    <header class="header">
+        <h1>Rosane Geringer</h1>
+    </header>
 
 </body>
 </html>
