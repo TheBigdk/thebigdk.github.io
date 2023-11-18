@@ -1,443 +1,202 @@
-* {
-  box-sizing: border-box;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #ffffff;
+.topmenu {
+    text-align: center;
 }
 
-
-.top-menu {
-  font-family: "Karla", sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 700;
-        letter-spacing: normal;
-        line-height: 0px;
-        text-decoration: none solid rgb(51, 51, 51);
-        text-align: left;
-        text-indent: 0px;
-        text-transform: none;
-        white-space: normal;
-        word-spacing: 0px;
-
-  /* Color & Background */
-        background-attachment: scroll;
-        background-color: rgb(247, 238, 233);
-        background-image: none;
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        color: rgb(51, 51, 51);
-
-        /* Box */
-        height: 50px;
-        width: auto;
-        border-top: 0px none rgb(51, 51, 51);
-        border-right: 0px none rgb(51, 51, 51);
-        border-bottom: 1px solid rgb(247, 247, 247);
-        border-left: 0px none rgb(51, 51, 51);
-        margin: 0px;
-        padding: 0px;
-        max-height: none;
-        min-height: 0px;
-        max-width: none;
-        min-width: 0px;
-
-        /* Positioning */
-        position: fixed;
-        top: 0px;
-        bottom: 832px;
-        right: 0px;
-        left: 0px;
-        float: none;
-        display: flex;
-        clear: none;
-        z-index: 9999;
-
-        /* List */
-        list-style-image: none;
-        list-style-type: disc;
-        list-style-position: outside;
-
-        /* Table */
-        border-collapse: separate;
-        border-spacing: 0px 0px;
-        caption-side: top;
-        empty-cells: show;
-        table-layout: auto;
-
-        /* Miscellaneous */
-        overflow: visible;
-        cursor: auto;
-        visibility: visible;
-
-        /* Effects */
-        transform: none;
-        transition: all 0.3s linear 0s;
-        outline: rgb(51, 51, 51) dashed 0px;
-        outline-offset: 0px;
-        box-sizing: content-box;
-        resize: none;
-        text-shadow: none;
-        text-overflow: clip;
-        word-wrap: break-word;
-        box-shadow: none;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+.topmenu nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: auto;
+    background-color: #F7EEE9;
 }
 
-.top-menu .menu {
-  list-style-type: none;
-  padding: 10px;
-  display: flex; /* Torna os itens do menu flexíveis */
+.topmenu nav > a {
+    color: black;
+    padding: 0 15px; /* Adicionado espaçamento horizontal aos links */
+    font-family: 'Marvin VTF Pro', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-.top-menu .menu li {
-  margin-right: 20px; /* Espaçamento entre os itens do menu */
+.topmenu nav .dropdown > a {
+    color: black;
+    padding: 0 15px; /* Adicionado espaçamento horizontal aos links */
+    font-family: 'Marvin VTF Pro', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.topmenu nav ul .item{
+    color: black;
+    padding-right: -20px; /* Adicionado espaçamento horizontal aos links */
+    font-family: 'Marvin VTF Pro', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.1px;
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.topmenu ul {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
 }
 
 
-.top-menu .icons i {
-  /* Box */
-        height: 10px;
-        width: 13px;
+/* ICONES MENU */
+.topmenu ul .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -35px; /* Reduzindo o espaçamento à direita */
+}
 
-
-  padding: 10px;
-
-
-
+.topmenu ul .item a {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    background-color: hsl(203, 92%, 97%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border: 3px solid hsl(203, 92%, 97%);
+    overflow: hidden;
 }
 
 
-.top-menu li{
-  float: left;
-  border-right:0px solid #bbb;
+  .topmenu ul .item a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    scale: 1 0;
+    transform-origin: bottom;
+    transition: scale 0.5s ease;
+  }
+
+  .topmenu ul .item:hover a::before {
+    scale: 1 1;
+  }
+
+.topmenu ul .item a img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-.top-menu ul{
-  list-style-type: none;
-  margin: auto;
-  padding: 10px;
-  padding-left: 200px;
-  overflow: hidden;
+.topmenu ul .item a:hover img {
+    filter: brightness(0) invert(1);
+    transform: rotateY(360deg);
 }
 
-.top-menu li a{
-  font-family: "Open Sans", sans-serif;
-  display: block;
-  font-size: 13px;
-  font-style: normal;
-        font-variant: normal;
-        font-weight: 999;
-  color: #000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: transparent;
-  transition: color 0.3s ease-in-out;
-  box-shadow: none;
-  letter-spacing: 1.5px;
-  text-decoration: none solid rgb(0, 0, 0);
-  text-transform: uppercase;
+  .topmenu ul .item a:hover span {
+    filter: brightness(0) invert(1);
+    transform: rotateY(360deg);
+  }
 
-  /* Color & Background */
-        background-attachment: scroll;
-        background-color: rgba(0, 0, 0, 0);
-        background-image: none;
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        color: rgb(0, 0, 0);
+  .topmenu ul .item:nth-child(1) {
+    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+  }
 
-  /* Positioning */
-        position: static;
-        top: auto;
-        bottom: auto;
-        right: auto;
-        left: auto;
-        float: none;
-        display: block;
-        clear: none;
-        z-index: auto;
-  /* List */
-  list-style-image: none;
-  list-style-type: disc;
-  list-style-position: outside;
-  /* Table */
-  border-collapse: separate;
-  border-spacing: 0px 0px;
-  caption-side: top;
-  empty-cells: show;
-  table-layout: auto;
+  .topmenu ul .item:nth-child(2) {
+    --bg-color: #0077b5;
+  }
 
-  /* Miscellaneous */
-  overflow: visible;
-  cursor: pointer;
-  visibility: visible;
+  .topmenu ul .item:nth-child(3) {
+    --bg-color: #ff0000;
+  }
 
-  /* Effects */
-        transform: matrix(1, 0, 0, 1, 0, 0);
-        transition: all 0.15s ease-in-out 0s;
-        outline: rgb(0, 0, 0) dashed 0px;
-        outline-offset: 0px;
-        box-sizing: content-box;
-        resize: none;
-        text-shadow: none;
-        text-overflow: clip;
-        word-wrap: break-word;
-        box-shadow: none;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+  .topmenu ul .item:nth-child(4) {
+    --bg-color: #000;
+  }
 
 
+/* Estilo do ícone de flecha para baixo */
+.topmenu nav a .arrow-down {
+    display: inline-block;
+    font-size: 10px; /* Ajusta o tamanho do ícone */
 }
 
-.top-menu li:last-child{
-  border-right: none;
+ /* Estilo específico para o menu suspenso */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.top-menu li a:hover:not(.active){
-  background-color: transparent;
-
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-.top-menu li a:hover {
-  color: #D1B099;
-  text-decoration: none;
+/* Mostrar o menu suspenso ao passar o mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-.active{
-  background-color: #04AA6D;
-
+/* Estilo para os itens do menu suspenso */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
+/* Cor diferente ao passar o mouse sobre os itens do menu suspenso */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+
+/*HEADER*/
 
 .header {
-  text-align: center;
-  padding: 50px;
-  font-size: 25px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: normal; /* Remova o negrito */
-  color: #333333;
-  /*pos*/
-  position: relative;
-  top: 0;
-  bottom: 0;
-  display: block;
+
+    width: 300px;
+    height: 150px;
+    background-image: url('/Imagens/HeaderImg.png');
+    background-size: cover; /* Cobrir completamente o contêiner */
+    background-position: center; /* Centralizar a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #ffffff;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-
-
-.menufoto { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; }.menufoto-item {position: relative;
-flex: 1;
-margin-right: 5px; /* Reduz a margem direita para 5px */
-background-color: #fff;
-color: #000;
-letter-spacing: 1.5px;
-text-align: center; /* Centraliza o texto */}.menufoto-item img { /* Font & Text */ font-family: Karla, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; line-height: 0px; text-decoration: none solid rgb(106, 99, 89); text-align: center; text-indent: 0px; text-transform: none; vertical-align: baseline; white-space: normal; word-spacing: 0px;/* Color & Background */
-  background-attachment: scroll;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: none;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  color: rgb(106, 99, 89);
-
-  /* Box */
-  height: 200px;
-  width: 352.587px;
-  border: 0px none rgb(106, 99, 89);
-  border-top: 0px none rgb(106, 99, 89);
-  border-right: 0px none rgb(106, 99, 89);
-  border-bottom: 0px none rgb(106, 99, 89);
-  border-left: 0px none rgb(106, 99, 89);
-  margin: 0px;
-  padding: 0px;
-  max-height: 200px;
-  min-height: 0px;
-  max-width: 100%;
-  min-width: 0px;
-
-  /* Positioning */
-  position: relative;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
-  float: none;
-  display: inline;
-  clear: none;
-  z-index: auto;}.botao { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 10px 20px; background-color: #ffffff; color: #000000; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }.botao:hover { background-color: #0056b3; }
-
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-  
-  
-.menufoto {
-  overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px; /* Reduced padding for mobile */
-  background-color: #fff;
-}
-
-.menufoto-item {
-  width: 100px;
-  display: inline-block;
-      width: 100%;
-      padding: 10px; /* Espaçamento entre as fotos */
-  flex: 1;
-  margin-right: 5px;
-  background-color: #fff;
-  color: #000;
-  text-align: center;
-  font-size: 12px; /* Reduced font size for mobile */
-}
-
-.menufoto-item img {
-  max-width: 100%; /* A imagem terá no máximo 100% da largura do elemento pai */
-  height: auto; /* A altura se ajustará automaticamente para manter a proporção original */
-  width: 200px; /* Largura máxima de 200px */
-}
-
-.botao {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.botao:hover {
-  background-color: #0056b3;
-}
-  
-  
-}
-
-
-
-
-
-.top-menu2 {
-
-  /* Color & Background */
-        background-attachment: scroll;
-        background-color: rgb(247, 238, 233);
-        background-image: none;
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        color: rgb(51, 51, 51);
-
-        /* Box */
-        height: 50px;
-        width: auto;
-        border-top: 0px none rgb(51, 51, 51);
-        border-right: 0px none rgb(51, 51, 51);
-        border-bottom: 1px solid rgb(247, 247, 247);
-        border-left: 0px none rgb(51, 51, 51);
-        margin: 0px;
-        padding: 0px;
-        max-height: none;
-        min-height: 0px;
-        max-width: none;
-        min-width: 0px;
-
-
-
-        /* List */
-        list-style-image: none;
-        list-style-type: disc;
-        list-style-position: outside;
-
+.header h1 {
+    color: black;
+    font-family: 'Cookie', cursive; /* Adicionando a fonte */ /* Adicionando a fonte */
+    font-size: 50px;
+    font-weight: normal;
+    font-style: normal;
+    transform: rotate(-5deg); /* Inclinar a fonte em -5 graus */
+    margin: 0;
 }
