@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -5,18 +6,19 @@
 
 .topmenu {
     text-align: center;
-		
-		
 }
 
 .topmenu nav {
+
     display: flex;
+    
+
+
     align-items: center;
     justify-content: center;
     height: 50px;
     width: auto;
-    background-color: #F7EEE9;
-		
+    background-color: #fff3ec;
 }
 
 .topmenu nav > a {
@@ -29,8 +31,6 @@
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
-		
-		
 }
 
 .topmenu nav .dropdown > a {
@@ -43,6 +43,18 @@
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.topmenu nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.topmenu nav a:hover {
+    color: #bb957c; /* Altera a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    text-decoration:wavy;
 }
 
 .topmenu nav ul .item{
@@ -71,7 +83,7 @@
     align-items: center;
     margin-right: -35px; /* Reduzindo o espaçamento à direita */
 }
-
+  
 .topmenu ul .item a {
     text-decoration: none;
     width: 30px;
@@ -87,7 +99,7 @@
     overflow: hidden;
 }
 
-
+  
   .topmenu ul .item a::before {
     content: '';
     position: absolute;
@@ -98,44 +110,41 @@
     transform-origin: bottom;
     transition: scale 0.5s ease;
   }
-
+  
   .topmenu ul .item:hover a::before {
     scale: 1 1;
   }
-
+  
 .topmenu ul .item a img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
     overflow: hidden;
-    transition: filter 0.5s ease, transform 0.5s ease;
+    filter: invert(1);
+    transition: transform 0.5s ease;
 }
-
+  
 .topmenu ul .item a:hover img {
-    filter: brightness(0) invert(1);
     transform: rotateY(360deg);
 }
+  
+  
+.topmenu ul .item:nth-child(1) a {
+    background: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+}
 
-  .topmenu ul .item a:hover span {
-    filter: brightness(0) invert(1);
-    transform: rotateY(360deg);
-  }
+.topmenu ul .item:nth-child(2) a {
+    background-color: #0077b5;
+}
 
-  .topmenu ul .item:nth-child(1) {
-    --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
-  }
+.topmenu ul .item:nth-child(3) a {
+    background-color: #ff0000;
+}
 
-  .topmenu ul .item:nth-child(2) {
-    --bg-color: #0077b5;
-  }
+.topmenu ul .item:nth-child(4) a {
+    background-color: #000;
+}
 
-  .topmenu ul .item:nth-child(3) {
-    --bg-color: #ff0000;
-  }
-
-  .topmenu ul .item:nth-child(4) {
-    --bg-color: #000;
-  }
 
 
 /* Estilo do ícone de flecha para baixo */
@@ -182,9 +191,7 @@
 /*HEADER*/
 
 .header {
-		
-		
-
+    
     width: 300px;
     height: 150px;
     background-image: url('/Imagens/HeaderImg.png');
@@ -213,35 +220,298 @@
 
 
 
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
 
+.menufoto-item {
+    position: relative;
+    padding: 5px;
+    margin-right: 5px; /* Reduz a margem direita para 5px */
+    background-color: #fff;
+    color: #000;
+    text-align: center; /* Centraliza o texto */
+}
 
+.menufoto-item img {
+    width: 350px;
+    max-width: 100%; /* Alterado para garantir que a imagem seja responsiva */
+    height: auto; /* Manter a proporção original da imagem */
+}
 
+.botao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
 
-@media only screen and (min-width: 601px) {
-    .topmenu nav > a[href="#menu"] {
-        display: none;
-    }
+.botao:hover {
+    background-color: #D1B099;
 }
 
 
 
+
+
+
+/*Postagem*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row .maincontent {
+    flex: 1;
+    margin-right: 0;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #f1f1f1;
+}
+
+.row .maincontent .drawbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FCF0E9;
+    height: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row .maincontent .card {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.row .maincontent .card h2 {
+    width: 100%; /* Ocupa toda a largura do container pai */
+    text-align: center; /* Centraliza o texto */
+}
+.row .maincontent .card h5 {
+    width: 100%; /* Ocupa toda a largura do container pai */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px;
+}
+
+.row .maincontent .card p {
+    flex: 1; /* Ocupa todo o espaço disponível */
+    width: 50%;
+    margin: 0 20px;
+}
+
+
+
+
+.row .maincontent .card .fakeimg {
+    background-image: url("/Imagens/cupcake.png");
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o container */
+    background-position: center; /* Centraliza a imagem horizontalmente e verticalmente */
+    width: 30%;
+    height: 300px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+
+
+
+
+
+
+
+/*SideBar*/
+.row .sidebar .card h2{
+    background-color: #FCF0E9;
+    text-align: center;
+    padding: 10px;
+}
+
+.row .sidebar .card{
+    
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+}
+
+.row .sidebar .fakeimg
+{
+    background-color: #aaa;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    width: 500px;
+    height: auto;
+    
+}
+
+.fechar:hover {
+    color: black;
+}
+/*Ajustar telas*/
 
 /* Mobile Styles */
-@media only screen and (max-width: 480px) {
-    .topmenu {
-        text-align: center;
+@media only screen and (max-width: 640px) {
+    .topmenu nav{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        width: auto;
+        background-color: #F7EEE9;
     }
 
-    .topmenu nav {
-    		display: grid;
-    align-items: center;
-    justify-content: center;
-    height: 350px;
-    width: auto;
-    background-color: #F7EEE9;
-        
+    /*PhotoGrid*/
+    .carousel {
+        flex-direction: column; /* Muda para uma coluna */
+        align-items: stretch; /* Estica os itens na coluna */
     }
-		
-		
+
+    .menufoto-item {
+        margin-right: 0; /* Remove a margem direita */
+    }
+
+    .row .maincontent {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    
+    .row .maincontent .card p{
+        
+        width: 40%;
+        margin: 0 20px;
+    }
+    
+    .row .maincontent .card .fakeimg{
+        background-color: #aaa;
+        width: 100%;
+        width: 40%;
+        height: 200px;
+    }
+
+
+
+
+
+
 
 }
+
+/*Tablet*/
+@media only screen and (min-width: 641px) and (max-width: 1280px) {
+    .topmenu nav{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        width: auto;
+        background-color: #F7EEE9;
+    }
+
+    .row .maincontent {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    
+
+
+    .row .maincontent .card p{
+        
+        width: 40%;
+        margin: 0 20px;
+    }
+    
+    .row .maincontent .card .fakeimg{
+        background-image: url("/Imagens/cupcake.png");
+        width: 100%;
+        width: 40%;
+        height: 200px;
+    }
+
+}
+
+
