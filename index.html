@@ -13,7 +13,7 @@
 
     <!-- Include Bootstrap CSS --> 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+  
 
 </head>
 <body>
@@ -21,9 +21,9 @@
 
     <div class="topmenu">
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Relacionamento</a>
-            <a href="#">Beleza</a>
+            <a href="index.html">Home</a>
+            <a href="relacionamento.html">Relacionamento</a>
+            <a href="beleza.html">Beleza</a>
             <a href="#">Decoração</a>
 
             <div class="dropdown">
@@ -41,7 +41,7 @@
             <ul>
                 <li class="item">
                     <a href="#">
-                        <img src="Imagens/instagram.svg" alt="Descrição da imagem">
+                        <img src="Imagens/instagram.svg">
                     </a>
                 </li>
                 <li class="item">
@@ -61,12 +61,81 @@
                 </li>
             </ul>
         </nav>
-
+        
     </div>
 
     <header class="header">
         <h1>Rosane Geringer</h1>
     </header>
+
+    
+    
+
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="menufoto-item">
+                <img src="Imagens/foto1.jpg" alt="Imagem 1">
+                <a href="#a" class="botao botao1">Decoração</a>
+            </div>
+            <div class="menufoto-item">
+                <img src="Imagens/foto2.jpg" alt="Imagem 2">
+                <a href="#b" class="botao botao2">Receitas</a>
+            </div>
+            <div class="menufoto-item">
+                <img src="Imagens/foto3.jpg" alt="Imagem 3">
+                <a href="#c" class="botao botao3">Contato</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--Menu-->
+    <div class="row">
+
+        <div class="maincontent">
+            <div class="drawbox"></div>
+            <div class="card">
+                <h2>TITULO DA POSTAGEM</h2>
+                <h5>Descrição, 18 Novembro, 2023</h5>
+                <div class="fakeimg"></div>
+                <p class="excerpt">Primeiro parágrafo...</p>
+            <button id="ler-mais-btn">Ler Mais</button>
+            
+            </div>
+
+        </div>
+
+
+        <div class="sidebar">
+            <div class="card">
+                <h2>Sobre Mim</h2>
+                <div class="fakeimg" style="height: 100px;">Imagem</div>
+                <p>Algum texto</p>
+            </div>
+            <div class="card">
+                <h3>Posts Populares</h3>
+                <div class="fakeimg"><p>Image</p></div>
+                <div class="fakeimg"><p>Image</p></div>
+                <div class="fakeimg"><p>Image</p></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            
+            <div id="conteudo-modal"></div>
+        </div>
+    </div>
+    <!-- Referência para o arquivo JavaScript externo -->
+<script src="script.js"></script>
+    
+
 
 </body>
 </html>
